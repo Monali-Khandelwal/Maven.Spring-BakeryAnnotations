@@ -1,9 +1,15 @@
 package com.zipcodewilmington.bakery.models;
 
-
+import javax.persistence.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import java.util.Objects;
 
+@Entity
 public class Baker {
+
+    @Id
+    @GeneratedValue
     private Long id;
 
     private String name;
@@ -12,8 +18,7 @@ public class Baker {
 
     private String specialty;
 
-    public Baker() {
-    }
+    public Baker() {}
 
     public Baker(String name, String employeeId, String specialty) {
         this(null, name, employeeId, specialty);
