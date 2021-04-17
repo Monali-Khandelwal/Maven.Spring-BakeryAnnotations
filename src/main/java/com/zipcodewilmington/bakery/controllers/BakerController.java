@@ -17,7 +17,7 @@ public class BakerController {
         this.service = service;
     }
 
-    @GetMapping("/bakers")  //This annotation is used for mapping HTTP GET requests onto specific handler methods.
+    @GetMapping("/bakers")  //annotation tells Spring that this code describes an endpoint that should be made available over the web.
     public ResponseEntity<Iterable<Baker>> index() {
         return new ResponseEntity<>(service.index(), HttpStatus.OK);
     }
